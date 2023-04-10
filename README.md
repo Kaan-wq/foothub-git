@@ -1,3 +1,46 @@
+	(the API is not free and needs to be paid for, the code works but the limit of free API-calls have been reached, so it does not currently work.)
+
+	-FootHub will be an application that allows users to see the stats of live
+	games in real time. There will also be a chat for each match, users will
+	be able to discuss about the highlights as the game is played.
+
+	-We have implemented the basic framework code (the skeleton) as well as the initial layout of the app.
+
+	-Plan to implement a working live chat as well as making the stats update live according to the game.
+	
+	Short description:
+	-src
+		App.css: CSS styles for the App.js component.
+		App.js: Main React component that renders the application's UI and handles user interaction.
+		App.test.js: Test for App.js component.
+		FootHubModel.js: Model for the app and provides methods for retrieving and manipulating data.
+		ReactRoot.js: A file that contains the root React component that renders the entire application.
+		apiConfig.js: Config for API calls.
+		firebase.js: Sets up Firebase SDK and initializes the Firebase app.
+		index.css: CSS styles for the app.
+		index.js: Sets up the React app and renders it to the root element.
+		matchesSource.js: Live game data for the application to display.
+		resolvePromise.js: Resolving promises with error handling.
+
+	-views
+		bannerView.js: Rendering a banner component at the top of the page.
+		chatView.js: Rendering chat.
+		matchesView.js: Rendering the live game stats component.
+		promiseNoData.js: Rendering a component that displays a message when no data is available.
+		statsView.js: Rendering a component that displays stats about the game.
+
+	-react
+		bannerPresenter.js: Presenter component that handles the logic and data for the banner or header component.
+		matchDetailsPresenter.js: Presenter component that handles the logic and data for displaying detailed match information.
+		matchesPresenter.js: Presenter component that handles the logic and data for displaying the live matches component.
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
