@@ -2,22 +2,22 @@ import '../styles/Matches.css'
 
 function MatchesView({ matches }){
     return (
-        <div className="container">
-            <div className="background left"></div>
+        <div className="matches-container">
+            <div className="matches-background matches-left"></div>
 
-            <div className="list">
+            <div className="matches-list">
                 <ul>
-                    {matches.map((match) =>
+                    {/*matches.map((match) =>
                         match.Events.map((event) =>
-                            <li /*onClick={() => matchStats(match.id)}*/>
+                            <li>
                                 <span>{event.T1[0].Nm}</span>
                                 <span>{event.T2[0].Nm}</span>
                             </li>)
-                        )}
+                        )*/}
                 </ul>
             </div>
 
-            <div className="background right"></div>
+            <div className="matches-background matches-right"></div>
         </div>
     )
 
