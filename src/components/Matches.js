@@ -2,10 +2,10 @@ import '../styles/Matches.css'
 
 function Matches(){
     return (
-        <div className="container">
-            <div className="background left"></div>
+        <div className="matches-container">
+            <div className="matches-background matches-left"></div>
 
-            <div className="list">
+            <div className="matches-list">
                 <ul>
                     <li>Match 1</li>
                     <li>Match 2</li>
@@ -20,7 +20,7 @@ function Matches(){
                 </ul>
             </div>
 
-            <div className="background right"></div>
+            <div className="matches-background matches-right"></div>
         </div>
 
     )
