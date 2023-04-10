@@ -2,6 +2,9 @@
 import FootHubModel from './FootHubModel.js';
 import BannerView from './views/bannerView';
 import Banner from './react/bannerPresenter.js';
+import Matches from './react/matchesPresenter.js';
+import MatchDetails from './react/matchDetailsPresenter.js';
+
 
 
 const myModel = new FootHubModel();
@@ -10,7 +13,12 @@ const myModel = new FootHubModel();
 
 function ReactRoot() { 
     return (
-        <Banner model={myModel}></Banner>
+        <div>
+            <Banner model={myModel}></Banner>
+            <Matches model={myModel}></Matches>
+            <MatchDetails model={myModel}></MatchDetails>
+        </div>
+        
     )
  }
 
