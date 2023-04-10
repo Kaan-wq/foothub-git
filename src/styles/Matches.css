@@ -1,0 +1,76 @@
+.matches-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.matches-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-size: cover;
+    z-index: -1;
+}
+
+.matches-left {
+    left: 0;
+    background: url(../assets/mbappe.jpg);
+}
+
+.matches-right {
+    right: 0;
+    background: url(../assets/mbappe.jpg);
+}
+
+.matches-list {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 25%;
+    right: 25%;
+    overflow-y: scroll;
+    padding: 0 5%;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.matches-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.matches-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.matches-list li:last-child {
+    border-bottom: none;
+}
+
+/* Styles for hover and active states */
+.matches-list li:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.matches-list li:active {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for selected state */
+.matches-list li.selected {
+    background: #f0f0f0;
+    font-weight: bold;
+}
+
+.matches-list li.selected:hover {
+    background: #e0e0e0;
+}

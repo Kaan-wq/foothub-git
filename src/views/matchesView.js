@@ -1,6 +1,6 @@
 import '../styles/Matches.css'
 
-function Matches({ matches }){
+function MatchesView({ matches }){
     return (
         <div className="container">
             <div className="background left"></div>
@@ -25,4 +25,4 @@ function Matches({ matches }){
     }
 }
 
-export default Matches
+export default MatchesView;
