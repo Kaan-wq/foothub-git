@@ -7,12 +7,13 @@ function MatchesView({ matches }){
 
             <div className="list">
                 <ul>
-                    {/*matches.map((match) =>
-                    <li onClick={() => matchStats(match.id)}>
-                        <span>match.teamOne</span>
-                        <span>match.scoreOne - match.scoreTwo</span>
-                        <span>match.teamTwo</span>
-                    </li>)*/}
+                    {matches.map((match) =>
+                        match.Events.map((event) =>
+                            <li /*onClick={() => matchStats(match.id)}*/>
+                                <span>{event.T1[0].Nm}</span>
+                                <span>{event.T2[0].Nm}</span>
+                            </li>)
+                        )}
                 </ul>
             </div>
 
