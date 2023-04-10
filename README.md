@@ -6,7 +6,11 @@
 
 	-We have implemented the basic framework code (the skeleton) as well as the initial layout of the app.
 
-	-Plan to implement a working live chat as well as making the stats update live according to the game.
+	-Plan to implement a working live chat (using a Third party component) as well as making the stats update live according to the game.
+	
+	- The routing is still TBD.
+	
+	- The design of the app will be enhanced as a last step of our project.
 	
 	Short description:
 	-src
