@@ -5,6 +5,7 @@ function MatchesView({ matches }) {
 
     const navigate= useNavigate();
     navigate("/stats")
+    const url = "https://lsm-static-prod.livescore.com/high/";
 
     return (
         <div className="matches-container">
@@ -15,9 +16,11 @@ function MatchesView({ matches }) {
                     {
                     matches.map((match) =>
                         match.Events.map((event) =>
-                            <li key={event.id} onClick={() => matchStats(event.id)}>
+                            <li key={event.Eid} onClick={() => matchStats(event.Eid)}>
+                                <img src={url + event.T1[0].Img} />
                                 <span>{event.T1[0].Nm}</span>
                                 <span>{event.T2[0].Nm}</span>
+                                <img src={url + event.T2[0].Img} />
                             </li>)
                         )
                     } 
@@ -27,8 +30,7 @@ function MatchesView({ matches }) {
         </div>
     )
 
-    function matchStats(matchId) { navigate(`/stats`); }
-    //   add this for final version      /${matchId}
+    function matchStats(matchId) { navigate(`/stats/${matchId}`); }
 }
 
 export default MatchesView;
