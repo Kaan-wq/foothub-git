@@ -1,7 +1,7 @@
 import '../styles/Matches.css';
 import {Link, useNavigate} from "react-router-dom";
 
-function MatchesView({ matches }) {
+function MatchesView({ matches, onMatch }) {
 
     const navigate= useNavigate();
     navigate("/stats")
@@ -15,8 +15,11 @@ function MatchesView({ matches }) {
                     {
                     matches.map((match) =>
                         match.Events.map((event) =>
-                            <li key={event.id} onClick={() => matchStats(event.id)}>
+                            <li key={event.Eid} onClick={() => matchStats(event.Eid, event)}>
                                 <span>{event.T1[0].Nm}</span>
+                                <span>{event.Tr1}</span>
+                                <span>-</span>
+                                <span>{event.Tr2}</span>
                                 <span>{event.T2[0].Nm}</span>
                             </li>)
                         )
@@ -27,7 +30,10 @@ function MatchesView({ matches }) {
         </div>
     )
 
-    function matchStats(matchId) { navigate(`/stats`); }
+    function matchStats(matchId, match) { 
+        navigate('/stats');
+        onMatch(matchId, match);
+    }
     //   add this for final version      /${matchId}
 }
 
