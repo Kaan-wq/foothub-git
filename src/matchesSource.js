@@ -13,6 +13,7 @@ function getLiveMatches(){
     function getMatchesACB(response) {
         //console.log(response);
         //console.log(response.Stages);
+
         return response.Stages;
     }
     return generalAPICall("matches/v2/list-live?Category=soccer").then(getMatchesACB);

@@ -1,3 +1,4 @@
+
 function promiseNoData(promiseState){
     if (!promiseState.promise) return <div>No data</div>;
     if (promiseState.data) return false;

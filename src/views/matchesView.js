@@ -12,30 +12,17 @@ function MatchesView({ matches }) {
 
             <div className="matches-list">
                 <ul>
-                    {/*matches.map((match) =>
+                    {
+                    matches.map((match) =>
                         match.Events.map((event) =>
                             <li key={event.id} onClick={() => matchStats(event.id)}>
                                 <span>{event.T1[0].Nm}</span>
                                 <span>{event.T2[0].Nm}</span>
                             </li>)
-                            
                         )
-                    */}
-                    <div>
-                        <li onClick={() => matchStats(null)}>Match 1</li>
-                    </div>
-                        <li>Match 2</li>
-                        <li>Match 3</li>
-                        <li>Match 4</li>
-                        <li>Match 5</li>
-                        <li>Match 6</li>
-                        <li>Match 7</li>
-                        <li>Match 8</li>
-                        <li>Match 9</li>
-                        <li>Match 10</li>
+                    } 
                 </ul>
             </div>
-
             <div className="matches-background matches-right"></div>
         </div>
     )
