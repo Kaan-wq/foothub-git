@@ -1,6 +1,11 @@
 import '../styles/Matches.css';
+import {Link, useNavigate} from "react-router-dom";
 
 function MatchesView({ matches }) {
+
+    const navigate= useNavigate();
+    navigate("/stats")
+
     return (
         <div className="matches-container">
             <div className="matches-background matches-left"></div>
@@ -9,14 +14,16 @@ function MatchesView({ matches }) {
                 <ul>
                     {/*matches.map((match) =>
                         match.Events.map((event) =>
-                            <li onClick={() => matchStats(event.id)}>
+                            <li key={event.id} onClick={() => matchStats(event.id)}>
                                 <span>{event.T1[0].Nm}</span>
                                 <span>{event.T2[0].Nm}</span>
                             </li>)
                             
                         )
-                    */} 
-                        <li>Match 1</li>
+                    */}
+                    <div>
+                        <li onClick={() => matchStats(null)}>Match 1</li>
+                    </div>
                         <li>Match 2</li>
                         <li>Match 3</li>
                         <li>Match 4</li>
@@ -33,10 +40,8 @@ function MatchesView({ matches }) {
         </div>
     )
 
-    function matchStats(id) {
-        // This function will be triggered when a match is clicked.
-        // Now it should link to the stats of the corresponding match.
-    }
+    function matchStats(matchId) { navigate(`/stats`); }
+    //   add this for final version      /${matchId}
 }
 
 export default MatchesView;

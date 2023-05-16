@@ -7,7 +7,7 @@ import {matchList} from "../data/dataStats";
 function MatchDetails({model}){
     return (
         <div>
-            <StatsView matchList={matchList}></StatsView>
+            <StatsView matchList={matchList} matchId={null}></StatsView>
             <ChatView></ChatView>
         </div>
     );
