@@ -2,6 +2,7 @@ import "../styles/Stats.css";
 
 function StatsView({ stats, match }) {
     console.log(stats)
+    console.log(match)
     return (
         <div className="stats-container">
             <ul className="stats">

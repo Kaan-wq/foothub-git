@@ -16,7 +16,7 @@ function MatchesView({ matches, onMatch }) {
                     {
                     matches.map((match) =>
                         match.Events.map((event) =>
-                            <li key={event.Eid} onClick={() => matchStats(event.Eid)}>
+                            <li key={event.Eid} onClick={() => matchStats(event.Eid, event)}>
                                 <img src={url + event.T1[0].Img} />
                                 <span>{event.T1[0].Nm}</span>
                                 <span>{event.Tr1}</span>
