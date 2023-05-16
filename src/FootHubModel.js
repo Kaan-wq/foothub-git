@@ -1,14 +1,29 @@
 import resolvePromise from "./resolvePromise";
-import { generalAPICall, getLiveMatches } from "./matchesSource";
+import { generalAPICall, getLiveMatches, getStats } from "./matchesSource";
+
+
 class FootHubModel{
     constructor(matchesArray=[]){
         this.name="FootHub";
         this.matches=matchesArray;
         this.matchesPromiseState={};
+        this.statsPromiseState={};
+        this.currentMatch = []
     }
 
     getMatches(){
         resolvePromise(getLiveMatches(), this.matchesPromiseState);
+    }
+
+    setCurrentMatch(matchId, match) {
+        if (matchId == this.currentId) return
+        this.currentId = matchId
+        this.currentMatch = match
+        
+    }
+
+    getStatistics() {
+        resolvePromise(getStats(this.currentId), this.statsPromiseState)
     }
 }
 
