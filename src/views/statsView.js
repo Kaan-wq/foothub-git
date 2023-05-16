@@ -1,6 +1,6 @@
 import "../styles/Stats.css";
 
-function StatsView({ matchList }) {
+function StatsView({ matchList, matchId}) {
     return (
         <div className="stats-container">
             <ul className="stats">
