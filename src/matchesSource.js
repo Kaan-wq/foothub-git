@@ -19,4 +19,13 @@ function getLiveMatches(){
     return generalAPICall("matches/v2/list-live?Category=soccer").then(getMatchesACB);
 }
 
-export {generalAPICall, getLiveMatches};
+function getStats(matchId) {
+        function getStatsACB(response) {
+            console.log(response)
+            return response
+        }
+
+    return generalAPICall('matches/v2/get-statistics?Category=soccer&Eid='+matchId).then(getStatsACB);
+}
+
+export {generalAPICall, getLiveMatches, getStats};

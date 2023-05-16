@@ -3,6 +3,7 @@ import {useState, useEffect} from "react";
 import promiseNoData from "../views/promiseNoData";
 import { getLiveMatches } from "../matchesSource";
 import resolvePromise from "../resolvePromise";
+import { func } from "prop-types";
 
 
 function Matches({model}) {
@@ -23,8 +24,12 @@ function Matches({model}) {
 
     useEffect(lifeACB, []);
 
+    function chosenMatch(matchId, match) {
+        model.setCurrentMatch(matchId, match);
+    }
 
-    return promiseNoData(model.matchesPromiseState) || <MatchesView matches={model.matchesPromiseState.data}></MatchesView>;
+
+    return promiseNoData(model.matchesPromiseState) || <MatchesView matches={model.matchesPromiseState.data} onMatch={chosenMatch}></MatchesView>;
 }
 
 export default Matches;
