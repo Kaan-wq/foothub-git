@@ -12,9 +12,55 @@
     border: 2px solid #ccc;
     border-radius: 10px;
     padding: 20px;
+    transition: all 0.3s ease;
 }
 
-.stats li > div {
+.stats li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.scoreboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.scoreboard img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin: 0 10px;
+}
+
+.scoreboard span:nth-child(1) {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.scoreboard span:nth-child(3) {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.scoreboard span:nth-child(4) {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+
+.scoreboard span:nth-child(2) {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+.statistics {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,20 +68,29 @@
     width: 100%;
 }
 
-.stats li > div > span:nth-child(1),
-.stats li > div > span:nth-child(3) {
-    font-size: 24px;
+.possession-gauge {
+    position: relative;
+    margin-bottom: 10px;
+    width: 300px;
+    height: 25px;
+}
+
+.possession-gauge svg {
+    width: 100%;
+    height: 100%;
+}
+
+.possession-gauge span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
     font-weight: bold;
 }
 
-.stats li > div > span:nth-child(2) {
-    font-size: 36px;
-    font-weight: bold;
-    margin: 20px 0;
-}
-
-.stats li > div > span:nth-child(4),
-.stats li > div > span:nth-child(5) {
+.statistics span {
     font-size: 16px;
     margin: 10px 0;
 }
+

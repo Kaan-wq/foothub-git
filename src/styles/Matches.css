@@ -33,7 +33,7 @@
     overflow-y: scroll;
     padding: 0 5%;
     background: #fff;
-    border: 2px solid #000;
+    border: none;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
@@ -46,17 +46,20 @@
 }
 
 .matches-list li {
-    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
     border-bottom: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 .matches-list li:last-child {
     border-bottom: none;
 }
 
-/* Styles for hover and active states */
 .matches-list li:hover {
     background: rgba(0, 0, 0, 0.1);
 }
@@ -65,7 +68,6 @@
     background: rgba(0, 0, 0, 0.2);
 }
 
-/* Styles for selected state */
 .matches-list li.selected {
     background: #f0f0f0;
     font-weight: bold;

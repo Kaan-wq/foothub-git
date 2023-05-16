@@ -1,6 +1,6 @@
-import '../styles/Matches.css'
+import '../styles/Matches.css';
 
-function MatchesView({ matches }){
+function MatchesView({ matches }) {
     return (
         <div className="matches-container">
             <div className="matches-background matches-left"></div>
@@ -9,11 +9,23 @@ function MatchesView({ matches }){
                 <ul>
                     {/*matches.map((match) =>
                         match.Events.map((event) =>
-                            <li>
+                            <li onClick={() => matchStats(event.id)}>
                                 <span>{event.T1[0].Nm}</span>
                                 <span>{event.T2[0].Nm}</span>
                             </li>)
-                        )*/}
+                            
+                        )
+                    */} 
+                        <li>Match 1</li>
+                        <li>Match 2</li>
+                        <li>Match 3</li>
+                        <li>Match 4</li>
+                        <li>Match 5</li>
+                        <li>Match 6</li>
+                        <li>Match 7</li>
+                        <li>Match 8</li>
+                        <li>Match 9</li>
+                        <li>Match 10</li>
                 </ul>
             </div>
 
@@ -21,8 +33,9 @@ function MatchesView({ matches }){
         </div>
     )
 
-    function matchStats(id){
-        // empty now, but it should link to the stats of the corresponding match
+    function matchStats(id) {
+        // This function will be triggered when a match is clicked.
+        // Now it should link to the stats of the corresponding match.
     }
 }
 
