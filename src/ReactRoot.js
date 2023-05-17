@@ -11,15 +11,23 @@ const myModel = new FootHubModel();
 const routes= [
     {
         path: "/",
-        element: <Matches model={myModel}></Matches>,
+        element: <div>
+            <Banner model={myModel}></Banner>
+            <Matches model={myModel}></Matches>
+        </div>,
     },
     {
         path: "/matches",
-        element: <Matches model={myModel}></Matches>,
+        element: <div>
+            <Banner model={myModel}></Banner>
+            <Matches model={myModel}></Matches>
+        </div>,
     },
     {
         path: "/stats",
-        element: <div class="flexParent">
+        element: <div>
+            <Banner model={myModel}></Banner>
+            <div class="flexParent">
                     <div class="stats">
                         <MatchDetails model={myModel}></MatchDetails>
                     </div>
@@ -29,16 +37,7 @@ const routes= [
                     
                      
                 </div>
-        
-    },
-    {
-        path: "/banner",
-        element: <Banner model={myModel}></Banner>,
-    },
-    {
-        path : "/stats/:matchId",
-        element: null
-        //changer stats pour avoir le match correspondant en props
+        </div>
     }
 ]
 
@@ -47,7 +46,6 @@ const routes= [
 function ReactRoot() { 
     return (
         <div>
-            <Banner model={myModel}></Banner>
             <RouterProvider router={createHashRouter(routes)} />
         </div>
         
