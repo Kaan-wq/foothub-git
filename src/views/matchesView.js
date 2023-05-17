@@ -6,6 +6,7 @@ function MatchesView({ matches, onMatch }) {
     const navigate= useNavigate();
     navigate("/stats")
     const url = "https://lsm-static-prod.livescore.com/high/";
+    const url2 = "https://lsm-static-prod.livescore.com/medium/";
 
     return (
         <div className="matches-container">
@@ -17,7 +18,7 @@ function MatchesView({ matches, onMatch }) {
                     matches.map((match) =>
                         match.Events.map((event) =>
                             <li key={event.Eid} onClick={() => matchStats(event.Eid, event)}>
-                                <img src={url + event.T1[0].Img} />
+                                <img src={url2 + event.T1[0].Img}/>
                                 <span>{event.T1[0].Nm}</span>
                                 <span>{event.Tr1}</span>
                                 <span>-</span>
