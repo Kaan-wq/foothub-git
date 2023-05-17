@@ -30,10 +30,7 @@ function MatchDetails({model}){
 
 
     return (
-        <div>
-            {promiseNoData(model.statsPromiseState) || <StatsView stats={model.statsPromiseState.data} match={model.currentMatch}></StatsView>}
-            <ChatView></ChatView>
-        </div>
+        promiseNoData(model.statsPromiseState) || <StatsView stats={model.statsPromiseState.data} match={model.currentMatch}></StatsView>
     );
 }
 

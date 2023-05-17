@@ -1,0 +1,48 @@
+import SendMessage from "./sendMessageView";
+import Message from "./messageView";
+import { useEffect, useRef, useState } from "react";
+import {
+  query,
+  collection,
+  orderBy,
+  onSnapshot,
+  limit,
+} from "firebase/firestore";
+import { db } from "../firebase";
+
+
+function ChatBox() {
+  const [messages, setMessages] = useState([]);
+
+  function changeChatACB() {
+    const q = query(
+      collection(db, "messages"),
+      orderBy("createdAt"),
+      limit(50)
+    );
+    const unsubscribe = onSnapshot(q, (QuerySnapshot) => {
+      let messages = [];
+      QuerySnapshot.forEach((doc) => {
+        messages.push({ ...doc.data(), id: doc.id });
+      });
+      setMessages(messages);
+    });
+    return () => unsubscribe;
+
+  }
+  
+  useEffect(changeChatACB, []);
+
+  return (
+    <main className="chat-box">
+      <div className="messages-wrapper">
+        {messages?.map((message) => (
+          <Message key={message.id} message={message} />
+        ))}
+      </div>
+      <SendMessage/>
+    </main>
+  )
+}
+
+export default ChatBox;
