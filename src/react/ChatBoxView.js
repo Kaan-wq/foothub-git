@@ -11,12 +11,12 @@ import {
 import { db } from "../firebase";
 
 
-function ChatBox() {
+function ChatBox({id}) {
   const [messages, setMessages] = useState([]);
 
   function changeChatACB() {
     const q = query(
-      collection(db, "messages"),
+      collection(db, "messages"+id),
       orderBy("createdAt"),
       limit(50)
     );
@@ -37,10 +37,10 @@ function ChatBox() {
     <main className="chat-box">
       <div className="messages-wrapper">
         {messages?.map((message) => (
-          <Message key={message.id} message={message} />
+          <Message key={message.id} message={message}/>
         ))}
       </div>
-      <SendMessage/>
+      <SendMessage matchId={id}/>
     </main>
   )
 }

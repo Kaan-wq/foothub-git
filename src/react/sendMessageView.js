@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { auth, db } from "../firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 
-function SendMessage() {
+function SendMessage({matchId}) {
 
     const [message, setMessage] = useState("");
 
@@ -13,7 +13,7 @@ function SendMessage() {
           return;
         }
         const { uid, displayName, photoURL } = auth.currentUser;
-        await addDoc(collection(db, "messages"), {
+        await addDoc(collection(db, "messages"+matchId), {
           text: message,
           name: displayName,
           avatar: photoURL,

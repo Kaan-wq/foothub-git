@@ -32,7 +32,7 @@ const routes= [
                         <MatchDetails model={myModel}></MatchDetails>
                     </div>
                     <div class="chat">
-                        <Chat/>
+                        <Chat model={myModel}></Chat>
                     </div>
                     
                      

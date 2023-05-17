@@ -6,8 +6,9 @@ import { useState } from "react";
 import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-function Chat() {
+function Chat({model}) {
     const [user] = useAuthState(auth);
+    console.log(model.currentId);
 
   return (
     <div className="App">
@@ -16,7 +17,7 @@ function Chat() {
         <Welcome />
       ) : (
         <>
-          <ChatBox />
+          <ChatBox id={model.currentId} />
         </>
       )}
     </div>

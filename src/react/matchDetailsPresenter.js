@@ -7,7 +7,6 @@ import promiseNoData from "../views/promiseNoData";
 //TODO: add relevant props
 //TODO: resolvePromise for MatchList
 function MatchDetails({model}){
-
     const [, forceReRender ]= useState();
     function reRenderACB(){ forceReRender(new Object()); } 
 

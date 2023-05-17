@@ -21,7 +21,6 @@ function getLiveMatches(){
 
 function getStats(matchId) {
         function getStatsACB(response) {
-            console.log(response)
             return response
         }
 
