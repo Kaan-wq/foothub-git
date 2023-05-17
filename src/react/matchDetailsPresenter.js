@@ -3,12 +3,16 @@ import StatsView from "../views/statsView";
 import {matchList} from "../data/dataStats";
 import {useState, useEffect} from "react";
 import promiseNoData from "../views/promiseNoData";
+import {useLocation} from "react-router-dom";
 
 //TODO: add relevant props
 //TODO: resolvePromise for MatchList
 function MatchDetails({model}){
 
     const [, forceReRender ]= useState();
+    const location = useLocation();
+    console.log(location);
+    const currentId = location.pathname.match(/\d+$/)[0];
 
     function reRenderACB(){ forceReRender(new Object()); } 
 
@@ -21,7 +25,7 @@ function MatchDetails({model}){
 
 
     function lifeACB(){
-        model.getStatistics()
+        model.getStatistics(currentId)
         updateOnPromise(model.statsPromiseState.promise, reRenderACB)
         
         return function ripACB(){};
@@ -30,7 +34,7 @@ function MatchDetails({model}){
     useEffect(lifeACB, []);
 
     return (
-        promiseNoData(model.statsPromiseState) || <StatsView stats={model.statsPromiseState.data} match={model.currentMatch}></StatsView>
+        promiseNoData(model.statsPromiseState) || <StatsView stats={model.statsPromiseState.data} match={JSON.parse(localStorage.getItem("match"))}></StatsView>
     );
 }
 

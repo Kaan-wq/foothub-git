@@ -38,6 +38,22 @@ const routes= [
                      
                 </div>
         </div>
+    },
+    {
+        path: "/stats/:matchId",
+        element: <div>
+            <Banner model={myModel}></Banner>
+            <div className="flexParent">
+                <div className="stats">
+                    <MatchDetails model={myModel}></MatchDetails>
+                </div>
+                <div className="chat">
+                    <Chat model={myModel}></Chat>
+                </div>
+
+
+            </div>
+        </div>
     }
 ]
 

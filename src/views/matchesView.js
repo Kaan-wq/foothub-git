@@ -40,7 +40,7 @@ function MatchesView({ matches, onMatch }) {
     );
 
     function matchStats(matchId, match) {
-        navigate("/stats");
+        navigate("/stats/" + matchId);
         onMatch(matchId, match);
     }
 }

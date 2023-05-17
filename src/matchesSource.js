@@ -27,4 +27,12 @@ function getStats(matchId) {
     return generalAPICall('matches/v2/get-statistics?Category=soccer&Eid='+matchId).then(getStatsACB);
 }
 
+function getMatch(matchId) {
+    function getMatchACB(response){
+        return response
+    }
+
+    return generalAPICall('matches/v2/get-scoreboard?Eid='+matchId+'&Category=soccer').then(getMatchACB);
+}
+
 export {generalAPICall, getLiveMatches, getStats};

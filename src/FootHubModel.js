@@ -19,11 +19,11 @@ class FootHubModel{
         if (matchId == this.currentId) return
         this.currentId = matchId
         this.currentMatch = match
-        
+        localStorage.setItem("match", JSON.stringify(match))
     }
 
-    getStatistics() {
-        resolvePromise(getStats(this.currentId), this.statsPromiseState)
+    getStatistics(id) {
+        resolvePromise(getStats(id), this.statsPromiseState)
     }
 }
 
