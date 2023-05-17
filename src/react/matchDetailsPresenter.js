@@ -8,7 +8,7 @@ import promiseNoData from "../views/promiseNoData";
 //TODO: resolvePromise for MatchList
 function MatchDetails({model}){
 
-    const [, forceReRender ]= useState();
+    const [, forceReRender ] = useState();
     function reRenderACB(){ forceReRender(new Object()); } 
 
     function updateOnPromise(promise, reRender){
@@ -27,7 +27,6 @@ function MatchDetails({model}){
     }
 
     useEffect(lifeACB, []);
-
 
     return (
         promiseNoData(model.statsPromiseState) || <StatsView stats={model.statsPromiseState.data} match={model.currentMatch}></StatsView>
