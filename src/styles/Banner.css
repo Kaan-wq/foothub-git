@@ -3,7 +3,7 @@
 .fh-banner {
   position: relative;
   padding: 32px;
-  background-image: linear-gradient(135deg, #2e3192 0%, #1b165a 100%);
+  background-image: linear-gradient(135deg, #345A92 0%, #1B2C4F 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,6 +19,11 @@
 }
 
 .fh-logo {
-  height: 45px;
-  width: 45px;
+  height: 90px; /* Adjust the value to make the logo bigger */
+  width: 90px; /* Adjust the value to maintain the aspect ratio */
+}
+
+.fh-app {
+  height: 80px; /* Adjust the value to make the logo bigger */
+  width: 250px; /* Adjust the value to maintain the aspect ratio */
 }
