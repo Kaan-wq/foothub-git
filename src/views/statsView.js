@@ -40,7 +40,7 @@ function StatsView({ stats, match }) {
             </div>
 
             <div className="stats-row">
-                <span className="stat-name">Possession :</span>
+                <span className="stat-name">Possession </span>
                 <div className="gauge-bar-container">
           <span
               className="gauge-bar gauge-bar-left"
@@ -60,7 +60,7 @@ function StatsView({ stats, match }) {
 
 
             <div className="stats-row">
-                <span className="stat-name">Shots off target :</span>
+                <span className="stat-name">Shots off target </span>
                 <div className="gauge-bar-container">
           <span
               className="gauge-bar gauge-bar-left"
@@ -80,7 +80,7 @@ function StatsView({ stats, match }) {
 
 
             <div className="stats-row">
-                <span className="stat-name">Shots on target :</span>
+                <span className="stat-name">Shots on target </span>
                 <div className="gauge-bar-container">
           <span
               className="gauge-bar gauge-bar-left"
@@ -100,7 +100,7 @@ function StatsView({ stats, match }) {
 
 
             <div className="stats-row">
-                <span className="stat-name">Fouls :</span>
+                <span className="stat-name">Fouls </span>
                 <div className="gauge-bar-container">
           <span
               className="gauge-bar gauge-bar-left"
@@ -120,7 +120,7 @@ function StatsView({ stats, match }) {
 
 
             <div className="stats-row">
-                <span className="stat-name">Corner kicks :</span>
+                <span className="stat-name">Corner kicks </span>
                 <div className="gauge-bar-container">
           <span
               className="gauge-bar gauge-bar-left"
@@ -140,7 +140,7 @@ function StatsView({ stats, match }) {
 
 
             <div className="stats-row">
-                <span className="stat-name">Throw ins :</span>
+                <span className="stat-name">Throw ins </span>
                 <div className="gauge-bar-container">
           <span
               className="gauge-bar gauge-bar-left"
@@ -160,7 +160,7 @@ function StatsView({ stats, match }) {
 
 
             <div className="stats-row">
-                <span className="stat-name">Yellow cards :</span>
+                <span className="stat-name">Yellow cards </span>
                 <div className="gauge-bar-container">
           <span
               className="gauge-bar gauge-bar-left"
@@ -180,7 +180,7 @@ function StatsView({ stats, match }) {
 
 
             <div className="stats-row">
-                <span className="stat-name">Goalkeeper saves :</span>
+                <span className="stat-name">Goalkeeper saves </span>
                 <div className="gauge-bar-container">
           <span
               className="gauge-bar gauge-bar-left"
@@ -200,7 +200,7 @@ function StatsView({ stats, match }) {
 
 
             <div className="stats-row">
-                <span className="stat-name">Offsides :</span>
+                <span className="stat-name">Offsides </span>
                 <div className="gauge-bar-container">
           <span
               className="gauge-bar gauge-bar-left"
