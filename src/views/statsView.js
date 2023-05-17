@@ -35,7 +35,7 @@ function StatsView({ stats, match }) {
 
             <div>
                 <button onClick={() => backToLive()}>
-                    Live Matches
+                    Back to Live Matches
                 </button>
             </div>
 
