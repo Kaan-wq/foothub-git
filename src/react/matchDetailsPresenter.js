@@ -11,7 +11,6 @@ function MatchDetails({model}){
 
     const [, forceReRender ]= useState();
     const location = useLocation();
-    console.log(location);
     const currentId = location.pathname.match(/\d+$/)[0];
 
     function reRenderACB(){ forceReRender(new Object()); } 

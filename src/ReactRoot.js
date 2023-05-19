@@ -48,7 +48,7 @@ const routes= [
                     <MatchDetails model={myModel}></MatchDetails>
                 </div>
                 <div className="chat">
-                    <Chat model={myModel}></Chat>
+                    <Chat></Chat>
                 </div>
 
 

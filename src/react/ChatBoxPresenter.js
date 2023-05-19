@@ -5,10 +5,12 @@ import Welcome from "./welcomeView";
 import { useState } from "react";
 import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { useLocation } from "react-router";
 
-function Chat({model}) {
+function Chat() {
     const [user] = useAuthState(auth);
-    console.log(model.currentId);
+    const location = useLocation();
+    const currentId = location.pathname.match(/\d+$/)[0];
 
   return (
     <div className="App">
@@ -17,7 +19,7 @@ function Chat({model}) {
         <Welcome />
       ) : (
         <>
-          <ChatBox id={model.currentId} />
+          <ChatBox id={currentId} />
         </>
       )}
     </div>
