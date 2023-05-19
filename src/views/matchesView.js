@@ -1,5 +1,5 @@
 import "../styles/Matches.css";
-import { Link, useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 function MatchesView({ matches, onMatch }) {
     const navigate = useNavigate();

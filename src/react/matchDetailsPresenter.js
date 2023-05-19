@@ -1,6 +1,4 @@
-import ChatView from "../views/chatView";
 import StatsView from "../views/statsView";
-import {matchList} from "../data/dataStats";
 import {useState, useEffect} from "react";
 import promiseNoData from "../views/promiseNoData";
 import {useLocation} from "react-router-dom";
@@ -13,7 +11,7 @@ function MatchDetails({model}){
     const location = useLocation();
     const currentId = location.pathname.match(/\d+$/)[0];
 
-    function reRenderACB(){ forceReRender(new Object()); } 
+    function reRenderACB(){ forceReRender(new Object()); }
 
     function updateOnPromise(promise, reRender){
         if(!promise) return

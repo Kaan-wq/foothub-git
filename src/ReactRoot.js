@@ -1,6 +1,6 @@
-// Add relevant imports here 
+// Add relevant imports here
 import FootHubModel from './FootHubModel.js';
-import {  createHashRouter,  RouterProvider} from "react-router-dom";
+import {createHashRouter, RouterProvider} from "react-router-dom";
 import Banner from './react/bannerPresenter.js';
 import Matches from './react/matchesPresenter.js';
 import MatchDetails from './react/matchDetailsPresenter.js';

@@ -1,9 +1,6 @@
 import MatchesView from "../views/matchesView";
-import {useState, useEffect} from "react";
+import {useEffect, useState} from "react";
 import promiseNoData from "../views/promiseNoData";
-import { getLiveMatches } from "../matchesSource";
-import resolvePromise from "../resolvePromise";
-import { func } from "prop-types";
 
 
 function Matches({model}) {

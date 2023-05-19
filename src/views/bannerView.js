@@ -1,7 +1,7 @@
 import "../styles/Banner.css";
 import logo from "../assets/logo.png";
 import name_app from "../assets/name.png"
-import { Link, useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 function BannerView({ name }) {
 

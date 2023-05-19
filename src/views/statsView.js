@@ -1,6 +1,5 @@
 import "../styles/Stats.css";
-import { Link, useNavigate } from "react-router-dom";
-import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 function StatsView({ stats, match }) {
 
