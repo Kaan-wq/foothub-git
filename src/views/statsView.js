@@ -7,7 +7,12 @@ function StatsView({ stats, match }) {
     const navigate = useNavigate();
 
     if (!stats.Stat) {
-        return <div>The match hasn't started yet :)</div>;
+        return <div>
+            The match hasn't started yet :)
+            <button onClick={() => backToLive()}>
+                Back to Live Matches
+            </button>
+        </div>;
     }
 
     const shof = 100/(stats.Stat[0].Shof + stats.Stat[1].Shof)
