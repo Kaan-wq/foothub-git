@@ -12,7 +12,7 @@ function BannerView({ name }) {
       <h1 className="fh-title">
           <img className="fh-app" src={name_app} alt="Logo" onClick={() => liveACB()}/>
       </h1>
-      <img className="fh-logo" src={logo} alt="Logo" />
+      <img className="fh-logo" src={logo} alt="Logo" onClick={() => liveACB()}/>
     </div>
   );
 
