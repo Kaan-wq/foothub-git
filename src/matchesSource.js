@@ -1,4 +1,4 @@
-import {BASE_URL, API_KEY} from "./apiConfig.js";
+import {API_KEY, BASE_URL} from "./apiConfig.js";
 import "./teacherFetch.js";
 
 function generalAPICall(apiParam) {

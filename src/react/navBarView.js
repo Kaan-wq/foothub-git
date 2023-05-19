@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import GoogleSignin from "../assets/btn_google_signin_dark_pressed_web.png";
-import { auth } from "../firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
+import {auth} from "../firebase";
+import {useAuthState} from "react-firebase-hooks/auth";
+import {GoogleAuthProvider, signInWithRedirect} from "firebase/auth";
 
 function NavBar() {
     const [user] = useAuthState(auth);

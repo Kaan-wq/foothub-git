@@ -1,14 +1,8 @@
 import SendMessage from "./sendMessageView";
 import Message from "./messageView";
-import { useEffect, useRef, useState } from "react";
-import {
-  query,
-  collection,
-  orderBy,
-  onSnapshot,
-  limit,
-} from "firebase/firestore";
-import { db } from "../firebase";
+import {useEffect, useState} from "react";
+import {collection, limit, onSnapshot, orderBy, query,} from "firebase/firestore";
+import {db} from "../firebase";
 
 
 function ChatBox({id}) {

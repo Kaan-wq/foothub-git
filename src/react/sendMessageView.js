@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { auth, db } from "../firebase";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import React, {useState} from "react";
+import {auth, db} from "../firebase";
+import {addDoc, collection, serverTimestamp} from "firebase/firestore";
 
 function SendMessage({matchId}) {
 

@@ -2,10 +2,9 @@ import "../styles/Chat.css";
 import NavBar from "./navBarView";
 import ChatBox from "./ChatBoxView";
 import Welcome from "./welcomeView";
-import { useState } from "react";
-import { auth } from "../firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useLocation } from "react-router";
+import {auth} from "../firebase";
+import {useAuthState} from "react-firebase-hooks/auth";
+import {useLocation} from "react-router";
 
 function Chat() {
     const [user] = useAuthState(auth);

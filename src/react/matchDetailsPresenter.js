@@ -1,5 +1,5 @@
 import StatsView from "../views/statsView";
-import {useState, useEffect} from "react";
+import {useEffect, useState} from "react";
 import promiseNoData from "../views/promiseNoData";
 import {useLocation} from "react-router-dom";
 

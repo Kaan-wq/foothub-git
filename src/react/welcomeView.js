@@ -1,8 +1,8 @@
 import React from "react";
 import GoogleSignin from "../assets/btn_google_signin_dark_pressed_web.png";
 import logo from "../assets/name.png"
-import { auth } from "../firebase";
-import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
+import {auth} from "../firebase";
+import {GoogleAuthProvider, signInWithRedirect} from "firebase/auth";
 
 function Welcome(){
   function googleSignInACB(){
